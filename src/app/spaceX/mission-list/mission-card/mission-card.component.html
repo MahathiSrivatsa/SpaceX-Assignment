@@ -1,0 +1,29 @@
+<div class="mission-card">
+  <div
+    class="card-container"
+    *ngFor="let mission of missionDetails; index as i"
+    tabindex="0"
+  >
+    <img
+      src="{{ mission.links.mission_patch_small }}"
+      onerror="this.src='https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png'"
+    />
+    <h4 class="card-heading">
+      {{ mission.mission_name }} #{{ mission.flight_number }}
+    </h4>
+    <h4>Mission Ids:</h4>
+    <li *ngFor="let id of mission.mission_id">{{ id }}</li>
+    <span>
+      <h4>Launch Year:</h4>
+      <p>{{ mission.launch_year }}</p>
+    </span>
+    <span>
+      <h4>Successful Launch:</h4>
+      <p>{{ mission.launch_success }}</p>
+    </span>
+    <span>
+      <h4>Successful Landing:</h4>
+      <p>{{ mission.rocket.first_stage.cores[0].land_success }}</p>
+    </span>
+  </div>
+</div>

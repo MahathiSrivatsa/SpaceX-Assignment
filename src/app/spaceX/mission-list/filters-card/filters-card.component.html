@@ -1,0 +1,42 @@
+<div class="filter-container">
+  <h3>Filters</h3>
+  <p>Launch Year</p>
+  <span>
+    <ng-container *ngFor="let button of yearButtons">
+      <ng-container *ngIf="button == selectedYear; else lightGreenButton">
+        <button class="selected-button">{{ button }}</button>
+      </ng-container>
+      <ng-template #lightGreenButton>
+        <button (click)="selectYear($event)" value="{{ button }}">
+          {{ button }}
+        </button>
+      </ng-template>
+    </ng-container>
+  </span>
+  <p>Successful Launch</p>
+  <span>
+    <ng-container *ngFor="let button of isSuccess">
+      <ng-container *ngIf="button == isLaunchSuccess; else lightGreenButton">
+        <button class="selected-button">{{ button }}</button>
+      </ng-container>
+      <ng-template #lightGreenButton>
+        <button (click)="selectLaunchStatus($event)" value="{{ button }}">
+          {{ button }}
+        </button>
+      </ng-template>
+    </ng-container>
+  </span>
+  <p>Successful Landing</p>
+  <span>
+    <ng-container *ngFor="let button of isSuccess">
+      <ng-container *ngIf="button == isLandSuccess; else lightGreenButton">
+        <button class="selected-button">{{ button }}</button>
+      </ng-container>
+      <ng-template #lightGreenButton>
+        <button (click)="selectLandStatus($event)" value="{{ button }}">
+          {{ button }}
+        </button>
+      </ng-template>
+    </ng-container>
+  </span>
+</div>

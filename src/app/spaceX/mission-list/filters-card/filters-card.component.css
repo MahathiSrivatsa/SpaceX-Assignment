@@ -1,0 +1,42 @@
+button {
+  display: block;
+  background-color: #c5df99;
+  border: none;
+  border-radius: 0.3em;
+  width: 5em;
+  height: 2em;
+  margin: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7cba0e;
+}
+
+span {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+p {
+  margin: 0;
+  margin-top: 0.5em;
+  border-bottom: 1px solid;
+  width: fit-content;
+  justify-self: center;
+}
+.filter-container {
+  display: grid;
+  background-color: #fff;
+  margin: 0.5em;
+  width: fit-content;
+}
+
+.selected-button {
+  background-color: #7cba0e;
+}
+
+h3 {
+  margin-top: 0.5em;
+  text-align: center;
+}
