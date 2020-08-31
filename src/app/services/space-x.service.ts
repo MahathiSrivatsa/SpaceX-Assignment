@@ -14,5 +14,36 @@ export class SpaceXService {
   getAll(): Observable<MissionDetail[]> {
     return this.httpClient.get<MissionDetail[]>(this.GET_ALL_URL);
   }
+
+  getFilteredData(year, isLaunchSuccess, isLandSuccess) {
+    let filterUrl = this.GET_ALL_URL;
+    if (year) {
+      filterUrl = filterUrl + `&launch_year=${year}`;
+    }
+
+    if (isLaunchSuccess) {
+      const launchStatus = this.mapToBoolean(isLaunchSuccess);
+      filterUrl = filterUrl + `&launch_success=${launchStatus}`;
+
+    }
+    if (isLandSuccess) {
+      const landStatus = this.mapToBoolean(isLandSuccess);
+      filterUrl = filterUrl + `&land_success=${landStatus}`;
+
+    }
+    return this.httpClient.get<MissionDetail[]>(filterUrl);
+
+  }
+
+  mapToBoolean(value) {
+    let boolValue;
+    if (value === 'Yes') {
+      boolValue = true;
+    } else {
+      boolValue = false;
+    }
+    return boolValue;
+  }
+
   constructor(private httpClient: HttpClient) { }
 }

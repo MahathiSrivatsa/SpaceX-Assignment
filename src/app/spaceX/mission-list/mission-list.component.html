@@ -1,6 +1,15 @@
 <div class="mission-container">
+  <h1>SpaceX Launch Programs</h1>
   <div class="mission-list">
-    <app-filters-card></app-filters-card>
+    <app-filters-card
+      (selectYear)="selectYear($event)"
+      [selectedYear]="selectedYear"
+      (launchStatus)="selectLaunchStatus($event)"
+      [isLaunchSuccess]="isLaunchSuccess"
+      (landStatus)="selectLandStatus($event)"
+      [isLandSuccess]="isLandSuccess"
+    ></app-filters-card>
     <app-mission-card [missionDetails]="missionDetails"></app-mission-card>
   </div>
+  <h2>Developed By: Mahathi Srivatsa</h2>
 </div>

@@ -4,6 +4,15 @@
   justify-items: center;
 }
 
+h1 {
+  margin: 0;
+  margin-left: 1em;
+}
+
+h2 {
+  text-align: center;
+}
+
 @media screen and (max-width: 700px) {
   .mission-list {
     grid-template-columns: 1fr;

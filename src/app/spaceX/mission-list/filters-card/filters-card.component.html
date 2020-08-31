@@ -7,7 +7,7 @@
         <button class="selected-button">{{ button }}</button>
       </ng-container>
       <ng-template #lightGreenButton>
-        <button (click)="selectYear($event)" value="{{ button }}">
+        <button (click)="emitSelectedYear($event)" value="{{ button }}">
           {{ button }}
         </button>
       </ng-template>
@@ -20,7 +20,7 @@
         <button class="selected-button">{{ button }}</button>
       </ng-container>
       <ng-template #lightGreenButton>
-        <button (click)="selectLaunchStatus($event)" value="{{ button }}">
+        <button (click)="emitLaunchStatus($event)" value="{{ button }}">
           {{ button }}
         </button>
       </ng-template>
@@ -33,7 +33,7 @@
         <button class="selected-button">{{ button }}</button>
       </ng-container>
       <ng-template #lightGreenButton>
-        <button (click)="selectLandStatus($event)" value="{{ button }}">
+        <button (click)="emitLandStatus($event)" value="{{ button }}">
           {{ button }}
         </button>
       </ng-template>

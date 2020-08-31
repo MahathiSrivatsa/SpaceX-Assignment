@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { yearButtons, isSuccess } from '../../../config/constants';
 
 @Component({
   selector: 'app-filters-card',
@@ -6,30 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filters-card.component.css']
 })
 export class FiltersCardComponent implements OnInit {
-  yearButtons = ['2006', '2007', '2008', '2009', '2010', '2011', '2012',
-    '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
+  @Input() selectedYear;
+  @Input() isLaunchSuccess;
+  @Input() isLandSuccess;
+  @Output() selectYear = new EventEmitter();
+  @Output() launchStatus = new EventEmitter();
+  @Output() landStatus = new EventEmitter();
+  yearButtons;
+  isSuccess;
 
-  isSuccess = ['Yes', 'No'];
-  selectedYear;
-  isLaunchSuccess;
-  isLandSuccess;
-
-  selectYear(event) {
-    this.selectedYear = event.target.value;
+  emitSelectedYear(event) {
+    this.selectYear.emit({ event: event });
   }
 
-  selectLaunchStatus(event) {
-    this.isLaunchSuccess = event.target.value;
+  emitLaunchStatus(event) {
+    this.launchStatus.emit({ event: event });
   }
 
-  selectLandStatus(event) {
-    this.isLandSuccess = event.target.value;
+  emitLandStatus(event) {
+    this.landStatus.emit({ event: event });
   }
-
 
   constructor() { }
 
   ngOnInit() {
+    this.isSuccess = isSuccess;
+    this.yearButtons = yearButtons;
   }
 
 }
