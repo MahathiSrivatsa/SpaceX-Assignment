@@ -1,6 +1,13 @@
-# SpaceXAssignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+
+# SpaceXAssignment
+An Angular application that provides a list of all SpaceX missions from 2006 to 2020.
+
+Components:
+The Application consists of 1 parent(Mission-list) and 2 child components(mission-card and filter-card). 
+-> 
+
+
 
 ## Development server
 

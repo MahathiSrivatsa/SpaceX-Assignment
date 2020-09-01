@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MissionDetail } from 'src/app/models';
+import { MissionDetail } from '../../../models';
 
 @Component({
   selector: 'app-mission-card',

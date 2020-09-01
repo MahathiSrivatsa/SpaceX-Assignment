@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpaceXService } from '../../services/space-x.service';
-import { MissionDetail } from 'src/app/models';
+import { MissionDetail } from '../../models';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
