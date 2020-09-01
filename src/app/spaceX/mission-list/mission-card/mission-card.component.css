@@ -3,12 +3,6 @@ img {
   width: 13em;
 }
 
-h4 {
-  margin: 0;
-  padding-top: 0.5em;
-  width: fit-content;
-}
-
 span {
   display: flex;
   width: fit-content;
@@ -40,17 +34,16 @@ p {
 
 .mission-card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .mission-card {
     grid-template-columns: 1fr;
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .mission-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

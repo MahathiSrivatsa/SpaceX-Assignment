@@ -15,19 +15,22 @@ export class MissionListComponent implements OnInit {
   isLandSuccess;
 
   selectYear($event) {
-    this.selectedYear = $event.event.target.value;
+    this.selectedYear = this.selectedYear === $event.event.target.value ?
+      null : $event.event.target.value;
     this.navigate();
     this.getFilteredData();
   }
 
   selectLaunchStatus($event) {
-    this.isLaunchSuccess = $event.event.target.value;
+    this.isLaunchSuccess = this.isLaunchSuccess === $event.event.target.value ?
+      null : $event.event.target.value;
     this.navigate();
     this.getFilteredData();
   }
 
   selectLandStatus($event) {
-    this.isLandSuccess = $event.event.target.value;
+    this.isLandSuccess = this.isLandSuccess === $event.event.target.value ?
+      null : $event.event.target.value;
     this.navigate();
     this.getFilteredData();
   }

@@ -1,31 +1,15 @@
 .mission-list {
   display: grid;
-  grid-template-columns: 1fr 4fr;
   justify-items: center;
 }
 
-h1 {
-  margin: 0;
-  margin-left: 1em;
-}
-
-h2 {
-  text-align: center;
-}
-
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .mission-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 4fr;
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1024px) {
-  .mission-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1441px) {
   .mission-container {
     display: grid;
     grid-template-columns: 1fr;

@@ -1,6 +1,6 @@
 <div class="mission-container">
-  <h1>SpaceX Launch Programs</h1>
-  <div class="mission-list">
+  <header><h1>SpaceX Launch Programs</h1></header>
+  <main class="mission-list">
     <app-filters-card
       (selectYear)="selectYear($event)"
       [selectedYear]="selectedYear"
@@ -10,6 +10,6 @@
       [isLandSuccess]="isLandSuccess"
     ></app-filters-card>
     <app-mission-card [missionDetails]="missionDetails"></app-mission-card>
-  </div>
-  <h2>Developed By: Mahathi Srivatsa</h2>
+  </main>
+  <footer><h2>Developed By: Mahathi Srivatsa</h2></footer>
 </div>
