@@ -26,7 +26,12 @@ On Filter:
 	-> The url updates to reflect the change. 
 	-> The respective filter options are highlighted. 
 	-> Deselect: Clicking on the selected option again will result in de-selection.
+  
+## Lighthouse Score:
 
+(Since we are loading about 100 objects, using lazy loading will increase the performance.)
+
+![lighthouse-score](lighthouse-score.png)
 
 
 ## Development server
