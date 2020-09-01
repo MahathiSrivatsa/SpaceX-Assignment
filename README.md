@@ -3,9 +3,22 @@
 # SpaceXAssignment
 An Angular application that provides a list of all SpaceX missions from 2006 to 2020.
 
-Components:
+The SpaceXAssignment application renders on the server-side. 
+
+#App Structure:
 The Application consists of 1 parent(Mission-list) and 2 child components(mission-card and filter-card). 
--> 
+-> The reusable component, "Mission-card" corresponds to the details of an individual mission. 
+-> The app follows mobile first design approach.
+-> The filter-options are hard-coded.
+-> Communication between the components takes place via the @Input() and @Output() decorators. 
+
+#Services:
+-> Fetching the correct data from the back-end.
+-> The application also provides a filtering functionality.
+On Filter:
+	-> The url updates to reflect the change. 
+	-> The respective filter options are highlighted. 
+	-> Deselect: Clicking on the selected option again will result in de-selection.
 
 
 
