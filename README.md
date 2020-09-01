@@ -12,6 +12,8 @@ The Application consists of 1 parent(Mission-list) and 2 child components(missio
 
 -> The app follows mobile first design approach.
 
+-> CSS grid and flex are used to make the application responsive. 
+
 -> The filter-options are hard-coded.
 
 -> Communication between the components takes place via the @Input() and @Output() decorators. 
